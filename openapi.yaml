@@ -138,4 +138,4 @@ components:
 
 externalDocs:
   description: "Weiterführende Dokumentation"
-  url: "https://github.com/bundesAPI/autobahn-api/blob/main/README.md"
+  url: "https://github.com/bundesAPI/lebensmittelwarnung-api/blob/main/README.md"
