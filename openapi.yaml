@@ -1,0 +1,142 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Lebensmittelwarnungen API
+  description: |
+    Was passiert auf Deutschlands Bundesstraßen? API für aktuelle Verwaltungsdaten zu Baustellen, Staus und Ladestationen. Außerdem Zugang zu Verkehrsüberwachungskameras und vielen weiteren Datensätzen.
+servers:
+  - url: https://megov.bayern.de/verbraucherschutz/baystmuv-verbraucherinfo/rest/api/
+
+
+paths:
+  /warnings/merged:
+    post:
+      operationId: list-warnungen
+      summary: Liste aller Lebensmittel und Produktwarnungen
+      description: Gibt eine Liste aller Lebensmittel und Produktwarnungen zurück.
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                food:
+                  $ref: "#/components/schemas/RequestOptions"
+                products:
+                  $ref: "#/components/schemas/RequestOptions"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+
+  
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header       # can be "header", "query" or "cookie"
+      name: Authorization  # name of the header, query parameter or cookie
+      description: "**APIKEY**: \"baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61\""
+  schemas:
+    
+    RequestOptions:
+      type: object
+      properties:
+        rows:
+          type: integer
+          example: 500
+        sort: 
+          type: string
+          example: "publishedDate desc, title asc"
+
+    Response:
+      type: object
+      properties: 
+        docs: 
+          type: array
+          items: 
+            type: object
+            properties: 
+              _type: 
+                type: string
+                example: .ProductWarning
+              archived: 
+                type: boolean
+              id: 
+                type: integer
+                format: int32
+                example: 4605
+              link: 
+                type: string
+                example: https://www.baua.de/SiteGlobals/Layout/DataViews/Datarecord_DBTool_Produktsicherheit.html?idDatarecord=1535276
+              publishedDate: 
+                type: integer
+                format: int64
+                example: 1630015200000
+              title: 
+                type: string
+                example: Aiways Personenkraftwagen (Aiways Automobile Europe GmbH)
+              product: 
+                type: object
+                properties: 
+                  _type: 
+                    type: string
+                    example: .ProductWarning$Product
+                  designation: 
+                    type: string
+                    example: Personenkraftwagen
+                  imageUrls: 
+                    type: array
+                    items: 
+                      type: string
+                      example: https://www.baua.de/media/images_produktsicherheit/Kfz.png
+                  manufacturer: 
+                    type: string
+                    example: Aiways Automobile Europe GmbH
+                  affectedProducts: 
+                    type: string
+                    example: "Herstellungsdaten: 31.12.2020 bis 31.01.2021 Rückruf-Code: Nicht bekannt"
+                  brandName: 
+                    type: string
+                    example: Aiways
+                  category: 
+                    type: string
+                    example: Kraftfahrzeuge -teile und -zubehör
+                  countryOfOrigin: 
+                    type: string
+                    example: China
+                  model: 
+                    type: string
+                    example: "e13*2007/46*2315*00 - 02 Typ MAS861-WVTA Verkaufsbezeichnung: U5"
+                  shortDescription: 
+                    type: string
+                    example: Personenkraftwagen
+              rapexInformation: 
+                type: object
+                properties: 
+                  alertNumber: 
+                    type: string
+                    example: A12/01231/21
+                  message: 
+                    type: string
+                    example: "<div>Freiwillige Maßnahme: Rückruf des Produktes vom Endverbraucher<br /><br />Durch falsches Schweißen der Querlenker kann es zu einem Verlust der Kontrolle über das Fahrzeug kommen. Dadurch erhöht sich das Unfall- und Verletzungsrisiko für die Insassen des Fahrzeugs. Das Produkt entspricht nicht den Vorschriften der Verordnung über die Genehmigung und Marktüberwachung von Kraftfahrzeugen und Kraftfahrzeuganhängern sowie von Systemen Bauteilen und selbstständigen technischen Einheiten für diese Fahrzeuge.</div>"
+              safetyInformation: 
+                type: object
+                properties: 
+                  ordinance: 
+                    type: string
+                    example: Straßenverkehrs-Zulassungs-Ordnung (StVZO)
+        numFound: 
+          type: integer
+          format: int32
+          example: 287
+
+externalDocs:
+  description: "Weiterführende Dokumentation"
+  url: "https://github.com/bundesAPI/autobahn-api/blob/main/README.md"
