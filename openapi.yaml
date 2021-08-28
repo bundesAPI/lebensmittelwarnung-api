@@ -48,11 +48,19 @@ components:
       type: object
       properties:
         rows:
+          description: Anzahl zu ladender Einträge
           type: integer
           example: 500
         sort: 
           type: string
           example: "publishedDate desc, title asc"
+        start:
+          type: integer
+          example: 11
+          description: Start-Index der zu ladenden Einträge
+        fq:
+          type: array
+          example: ["publishedDate > 1630067654000"]
 
     Response:
       type: object
