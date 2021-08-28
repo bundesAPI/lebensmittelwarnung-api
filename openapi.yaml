@@ -2,8 +2,7 @@ openapi: "3.0.0"
 info:
   version: 1.0.0
   title: Lebensmittelwarnungen API
-  description: |
-    Was passiert auf Deutschlands Bundesstraßen? API für aktuelle Verwaltungsdaten zu Baustellen, Staus und Ladestationen. Außerdem Zugang zu Verkehrsüberwachungskameras und vielen weiteren Datensätzen.
+  description: Liste aller Lebensmittel und Produktwarnungen
 servers:
   - url: https://megov.bayern.de/verbraucherschutz/baystmuv-verbraucherinfo/rest/api/
 
