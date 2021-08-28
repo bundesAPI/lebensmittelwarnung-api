@@ -27,7 +27,7 @@ paths:
                 products:
                   $ref: "#/components/schemas/RequestOptions"
       responses:
-        200:
+        "200":
           description: Success
           content:
             application/json:
