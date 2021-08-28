@@ -15,8 +15,20 @@
         window.onload = function () {
             const ui = SwaggerUIBundle({
                 url: "openapi.yaml", 
-                dom_id: "#openapi"
-            })
+                dom_id: "#openapi",
+                 requestInterceptor: function(req) {   
+                    var mapping = {
+                        "megov.bayern.de": "lebensmittelwarnung.api.proxy.bund.dev"
+                    }
+                    if(this.url !== "openapi.yaml") {
+                       var url = new URL(req.url);
+                       url.hostname = mapping[url.hostname];
+                       req.url = url.href;
+                    }
+                    return req;
+              },
+            });
+           ui.preauthorizeApiKey("ApiKeyAuth", "baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61")
         }
     </script>
 </body>
