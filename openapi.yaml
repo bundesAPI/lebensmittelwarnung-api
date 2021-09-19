@@ -60,6 +60,8 @@ components:
           description: Start-Index der zu ladenden Einträge
         fq:
           type: array
+          items:
+            type: string
           example: ["publishedDate > 1630067654000"]
 
     Response:
