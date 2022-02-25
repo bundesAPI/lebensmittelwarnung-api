@@ -1,4 +1,4 @@
-templateDir:  ./local/deutschland_templates
+templateDir:  ./deutschland_templates
 additionalProperties:
   packageName: "lebensmittelwarnung"
   infoName: "BundesAPI"
