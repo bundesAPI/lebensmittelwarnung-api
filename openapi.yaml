@@ -41,7 +41,7 @@ components:
       type: apiKey
       in: header       # can be "header", "query" or "cookie"
       name: Authorization  # name of the header, query parameter or cookie
-      description: "**APIKEY**: \"baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61\""
+      description: "**Authorization**: \"baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61\""
   schemas:
     
     RequestOptions:
