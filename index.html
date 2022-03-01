@@ -28,9 +28,9 @@
                     return req;
               },
                  onComplete: function() {
-                   ui.preauthorizeApiKey("ApiKeyAuth", "baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61")
-                   ui.preauthorizeApiKey("api_key", "baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61")
-
+                   <!-- ui.preauthorizeApiKey("ApiKeyAuth", "baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61")
+                   ui.preauthorizeApiKey("api_key", "baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61") -->
+                   ui.preauthorizeApiKey("Authorization","baystmuv-vi-1.0 os=ios, key=9d9e8972-ff15-4943-8fea-117b5a973c61")
                   }
             });
            
