@@ -12,15 +12,18 @@
 import sys
 import unittest
 
-from deutschland.lebensmittelwarnung.model.response_rapex_information import (
-    ResponseRapexInformation,
-)
+from deutschland.lebensmittelwarnung.model.request_options import RequestOptions
 
 from deutschland import lebensmittelwarnung
 
+globals()["RequestOptions"] = RequestOptions
+from deutschland.lebensmittelwarnung.model.list_warnungen_request import (
+    ListWarnungenRequest,
+)
 
-class TestResponseRapexInformation(unittest.TestCase):
-    """ResponseRapexInformation unit test stubs"""
+
+class TestListWarnungenRequest(unittest.TestCase):
+    """ListWarnungenRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +31,10 @@ class TestResponseRapexInformation(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testResponseRapexInformation(self):
-        """Test ResponseRapexInformation"""
+    def testListWarnungenRequest(self):
+        """Test ListWarnungenRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ResponseRapexInformation()  # noqa: E501
+        # model = ListWarnungenRequest()  # noqa: E501
         pass
 
 

@@ -1,4 +1,4 @@
-# ResponseProduct
+# ResponseDocsInnerProduct
 
 
 ## Properties

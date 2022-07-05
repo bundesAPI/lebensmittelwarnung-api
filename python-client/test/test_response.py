@@ -12,11 +12,11 @@
 import sys
 import unittest
 
-from deutschland.lebensmittelwarnung.model.response_docs import ResponseDocs
+from deutschland.lebensmittelwarnung.model.response_docs_inner import ResponseDocsInner
 
 from deutschland import lebensmittelwarnung
 
-globals()["ResponseDocs"] = ResponseDocs
+globals()["ResponseDocsInner"] = ResponseDocsInner
 from deutschland.lebensmittelwarnung.model.response import Response
 
 

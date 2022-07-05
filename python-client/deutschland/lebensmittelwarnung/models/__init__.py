@@ -9,14 +9,18 @@
 # import sys
 # sys.setrecursionlimit(n)
 
-from deutschland.lebensmittelwarnung.model.inline_object import InlineObject
+from deutschland.lebensmittelwarnung.model.list_warnungen_request import (
+    ListWarnungenRequest,
+)
 from deutschland.lebensmittelwarnung.model.request_options import RequestOptions
 from deutschland.lebensmittelwarnung.model.response import Response
-from deutschland.lebensmittelwarnung.model.response_docs import ResponseDocs
-from deutschland.lebensmittelwarnung.model.response_product import ResponseProduct
-from deutschland.lebensmittelwarnung.model.response_rapex_information import (
-    ResponseRapexInformation,
+from deutschland.lebensmittelwarnung.model.response_docs_inner import ResponseDocsInner
+from deutschland.lebensmittelwarnung.model.response_docs_inner_product import (
+    ResponseDocsInnerProduct,
 )
-from deutschland.lebensmittelwarnung.model.response_safety_information import (
-    ResponseSafetyInformation,
+from deutschland.lebensmittelwarnung.model.response_docs_inner_rapex_information import (
+    ResponseDocsInnerRapexInformation,
+)
+from deutschland.lebensmittelwarnung.model.response_docs_inner_safety_information import (
+    ResponseDocsInnerSafetyInformation,
 )

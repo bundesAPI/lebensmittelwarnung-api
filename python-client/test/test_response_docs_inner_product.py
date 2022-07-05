@@ -12,13 +12,15 @@
 import sys
 import unittest
 
-from deutschland.lebensmittelwarnung.model.response_product import ResponseProduct
+from deutschland.lebensmittelwarnung.model.response_docs_inner_product import (
+    ResponseDocsInnerProduct,
+)
 
 from deutschland import lebensmittelwarnung
 
 
-class TestResponseProduct(unittest.TestCase):
-    """ResponseProduct unit test stubs"""
+class TestResponseDocsInnerProduct(unittest.TestCase):
+    """ResponseDocsInnerProduct unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,10 +28,10 @@ class TestResponseProduct(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testResponseProduct(self):
-        """Test ResponseProduct"""
+    def testResponseDocsInnerProduct(self):
+        """Test ResponseDocsInnerProduct"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ResponseProduct()  # noqa: E501
+        # model = ResponseDocsInnerProduct()  # noqa: E501
         pass
 
 

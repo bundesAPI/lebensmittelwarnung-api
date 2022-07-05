@@ -12,15 +12,15 @@
 import sys
 import unittest
 
-from deutschland.lebensmittelwarnung.model.response_safety_information import (
-    ResponseSafetyInformation,
+from deutschland.lebensmittelwarnung.model.response_docs_inner_rapex_information import (
+    ResponseDocsInnerRapexInformation,
 )
 
 from deutschland import lebensmittelwarnung
 
 
-class TestResponseSafetyInformation(unittest.TestCase):
-    """ResponseSafetyInformation unit test stubs"""
+class TestResponseDocsInnerRapexInformation(unittest.TestCase):
+    """ResponseDocsInnerRapexInformation unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestResponseSafetyInformation(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testResponseSafetyInformation(self):
-        """Test ResponseSafetyInformation"""
+    def testResponseDocsInnerRapexInformation(self):
+        """Test ResponseDocsInnerRapexInformation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ResponseSafetyInformation()  # noqa: E501
+        # model = ResponseDocsInnerRapexInformation()  # noqa: E501
         pass
 
 

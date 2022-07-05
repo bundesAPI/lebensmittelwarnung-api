@@ -22,7 +22,7 @@ Gibt eine Liste aller Lebensmittel und Produktwarnungen zurück.
 import time
 from deutschland import lebensmittelwarnung
 from deutschland.lebensmittelwarnung.api import default_api
-from deutschland.lebensmittelwarnung.model.inline_object import InlineObject
+from deutschland.lebensmittelwarnung.model.list_warnungen_request import ListWarnungenRequest
 from deutschland.lebensmittelwarnung.model.response import Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://megov.bayern.de/verbraucherschutz/baystmuv-verbraucherinfo/rest/api
@@ -46,7 +46,7 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 with lebensmittelwarnung.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
-    inline_object = InlineObject(
+    list_warnungen_request = ListWarnungenRequest(
         food=RequestOptions(
             rows=500,
             sort="publishedDate desc, title asc",
@@ -59,13 +59,13 @@ with lebensmittelwarnung.ApiClient(configuration) as api_client:
             start=11,
             fq=["publishedDate > 1630067654000"],
         ),
-    ) # InlineObject |  (optional)
+    ) # ListWarnungenRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Liste aller Lebensmittel und Produktwarnungen
-        api_response = api_instance.list_warnungen(inline_object=inline_object)
+        api_response = api_instance.list_warnungen(list_warnungen_request=list_warnungen_request)
         pprint(api_response)
     except lebensmittelwarnung.ApiException as e:
         print("Exception when calling DefaultApi->list_warnungen: %s\n" % e)
@@ -76,7 +76,7 @@ with lebensmittelwarnung.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object** | [**InlineObject**](InlineObject.md)|  | [optional]
+ **list_warnungen_request** | [**ListWarnungenRequest**](ListWarnungenRequest.md)|  | [optional]
 
 ### Return type
 

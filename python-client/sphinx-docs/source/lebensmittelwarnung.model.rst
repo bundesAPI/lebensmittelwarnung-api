@@ -4,10 +4,10 @@ lebensmittelwarnung.model package
 Submodules
 ----------
 
-lebensmittelwarnung.model.inline\_object module
------------------------------------------------
+lebensmittelwarnung.model.list\_warnungen\_request module
+---------------------------------------------------------
 
-.. automodule:: lebensmittelwarnung.model.inline_object
+.. automodule:: lebensmittelwarnung.model.list_warnungen_request
    :members:
    :undoc-members:
    :show-inheritance:
@@ -28,34 +28,34 @@ lebensmittelwarnung.model.response module
    :undoc-members:
    :show-inheritance:
 
-lebensmittelwarnung.model.response\_docs module
------------------------------------------------
+lebensmittelwarnung.model.response\_docs\_inner module
+------------------------------------------------------
 
-.. automodule:: lebensmittelwarnung.model.response_docs
+.. automodule:: lebensmittelwarnung.model.response_docs_inner
    :members:
    :undoc-members:
    :show-inheritance:
 
-lebensmittelwarnung.model.response\_product module
---------------------------------------------------
+lebensmittelwarnung.model.response\_docs\_inner\_product module
+---------------------------------------------------------------
 
-.. automodule:: lebensmittelwarnung.model.response_product
+.. automodule:: lebensmittelwarnung.model.response_docs_inner_product
    :members:
    :undoc-members:
    :show-inheritance:
 
-lebensmittelwarnung.model.response\_rapex\_information module
--------------------------------------------------------------
+lebensmittelwarnung.model.response\_docs\_inner\_rapex\_information module
+--------------------------------------------------------------------------
 
-.. automodule:: lebensmittelwarnung.model.response_rapex_information
+.. automodule:: lebensmittelwarnung.model.response_docs_inner_rapex_information
    :members:
    :undoc-members:
    :show-inheritance:
 
-lebensmittelwarnung.model.response\_safety\_information module
---------------------------------------------------------------
+lebensmittelwarnung.model.response\_docs\_inner\_safety\_information module
+---------------------------------------------------------------------------
 
-.. automodule:: lebensmittelwarnung.model.response_safety_information
+.. automodule:: lebensmittelwarnung.model.response_docs_inner_safety_information
    :members:
    :undoc-members:
    :show-inheritance:

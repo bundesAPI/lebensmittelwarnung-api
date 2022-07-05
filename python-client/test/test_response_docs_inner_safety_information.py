@@ -12,16 +12,15 @@
 import sys
 import unittest
 
-from deutschland.lebensmittelwarnung.model.request_options import RequestOptions
+from deutschland.lebensmittelwarnung.model.response_docs_inner_safety_information import (
+    ResponseDocsInnerSafetyInformation,
+)
 
 from deutschland import lebensmittelwarnung
 
-globals()["RequestOptions"] = RequestOptions
-from deutschland.lebensmittelwarnung.model.inline_object import InlineObject
 
-
-class TestInlineObject(unittest.TestCase):
-    """InlineObject unit test stubs"""
+class TestResponseDocsInnerSafetyInformation(unittest.TestCase):
+    """ResponseDocsInnerSafetyInformation unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +28,10 @@ class TestInlineObject(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInlineObject(self):
-        """Test InlineObject"""
+    def testResponseDocsInnerSafetyInformation(self):
+        """Test ResponseDocsInnerSafetyInformation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = InlineObject()  # noqa: E501
+        # model = ResponseDocsInnerSafetyInformation()  # noqa: E501
         pass
 
 

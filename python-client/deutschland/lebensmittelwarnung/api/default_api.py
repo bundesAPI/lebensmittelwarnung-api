@@ -14,7 +14,9 @@ import sys  # noqa: F401
 
 from deutschland.lebensmittelwarnung.api_client import ApiClient
 from deutschland.lebensmittelwarnung.api_client import Endpoint as _Endpoint
-from deutschland.lebensmittelwarnung.model.inline_object import InlineObject
+from deutschland.lebensmittelwarnung.model.list_warnungen_request import (
+    ListWarnungenRequest,
+)
 from deutschland.lebensmittelwarnung.model.response import Response
 from deutschland.lebensmittelwarnung.model_utils import (  # noqa: F401
     check_allowed_values,
@@ -49,7 +51,7 @@ class DefaultApi(object):
             },
             params_map={
                 "all": [
-                    "inline_object",
+                    "list_warnungen_request",
                 ],
                 "required": [],
                 "nullable": [],
@@ -60,11 +62,11 @@ class DefaultApi(object):
                 "validations": {},
                 "allowed_values": {},
                 "openapi_types": {
-                    "inline_object": (InlineObject,),
+                    "list_warnungen_request": (ListWarnungenRequest,),
                 },
                 "attribute_map": {},
                 "location_map": {
-                    "inline_object": "body",
+                    "list_warnungen_request": "body",
                 },
                 "collection_format_map": {},
             },
@@ -87,7 +89,7 @@ class DefaultApi(object):
 
 
         Keyword Args:
-            inline_object (InlineObject): [optional]
+            list_warnungen_request (ListWarnungenRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -113,6 +115,10 @@ class DefaultApi(object):
             _host_index (int/None): specifies the index of the server
                 that we want to use.
                 Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
             async_req (bool): execute request asynchronously
 
         Returns:
@@ -129,4 +135,5 @@ class DefaultApi(object):
         kwargs["_spec_property_naming"] = kwargs.get("_spec_property_naming", False)
         kwargs["_content_type"] = kwargs.get("_content_type")
         kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs["_request_auths"] = kwargs.get("_request_auths", None)
         return self.list_warnungen_endpoint.call_with_http_info(**kwargs)
